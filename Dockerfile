@@ -5,6 +5,6 @@ RUN curl -fsSL -o /dbmate https://github.com/amacneil/dbmate/releases/download/v
 
 FROM golang:latest
 
-COPY --from=curl /dbmate /dbmate
+COPY --from=curl /dbmate /usr/local/bin/dbmate
 
-ENTRYPOINT ["/dbmate"]
+ENTRYPOINT ["/usr/local/bin/dbmate"]
